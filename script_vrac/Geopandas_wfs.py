@@ -4,8 +4,8 @@ from requests import Request
 from owslib.wfs import WebFeatureService
 
 # URL for WFS backend
-urla = "https://wxs.ign.fr/cartovecto/geoportail/wfs?VERSION=2.0.0&TYPENAMES=BDCARTO_BDD_WLD_WGS84G:acces_equipement&COUNT=1000&SRSNAME=EPSG:4326&BBOX=46.83807589,2.05303178,47.53821707,3.03137375&request=GetFeature&outputFormat=json"
-urlb = 'https://wxs-gpu.mongeoportail.ign.fr/externe/39wtxmgtn23okfbbs1al2lz3/wfs'
+#urla = "https://wxs.ign.fr/cartovecto/geoportail/wfs?VERSION=2.0.0&TYPENAMES=BDCARTO_BDD_WLD_WGS84G:acces_equipement&COUNT=1000&SRSNAME=EPSG:4326&BBOX=46.83807589,2.05303178,47.53821707,3.03137375&request=GetFeature&outputFormat=json"
+#urlb = 'https://wxs-gpu.mongeoportail.ign.fr/externe/39wtxmgtn23okfbbs1al2lz3/wfs'
 url= 'https://wxs.ign.fr/parcellaire/geoportail/wfs'
 TRACE ('Initialisation url')
 # Initialize
