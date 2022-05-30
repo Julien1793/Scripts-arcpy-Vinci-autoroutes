@@ -6,7 +6,7 @@
 # Contenu :
 # À partir des parcelles ONF sélectionnées dans Arcgispro, cet outil permet
 # d'exporter les fichiers qui sont associés à celle(s)-ci. Les fichiers sont
-# stockés dans une table (champ blob) qui est reliée aux parcelles.
+# stockés dans une table (champ blob) qui est reliée aux parcelles..
 #-------------------------------------------------------------------------------
 import os
 import arcpy
