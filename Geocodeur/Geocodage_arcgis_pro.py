@@ -370,5 +370,5 @@ if __name__ == '__main__':
         CALC_POLYGON = arcpy.GetParameter(4) # Si coché : calcul début et fin des polygon mais traitement plus long (booléen facultatif)
         FIELD_TARGET = arcpy.GetParameterAsText(5) # Champ cible pour la projection spécifique (facultatif)
         CODER        = arcpy.GetParameterAsText(6) # URL de l'API de géocodage
-# Lancement du script d
+# Lancement du script ddd
 arcgis_GeomtoPR(DATA,FIELDS_LIST,PROJ,FIELD_TARGET,PROJ_VA,CALC_POLYGON,CODER)
