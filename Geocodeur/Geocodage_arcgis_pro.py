@@ -353,12 +353,14 @@ def arcgis_GeomtoPR(path,fields_add_input,projection,aut_field,proj_va,calc_poly
 #-------------------------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
     Test = False
+    # Execution en main et permet de tester le script en phase de dev depuis un IDE (simplicité debug...)
     if Test is True:
         DATA         = r'C:\0_COFIROUTE\3_SIG\01_WORK\2022\05_13_22_Zone_exclusion_bruit\RENDU_FINAL\rendu_final_bruit.gdb\zone_exclusion_methode2'
         FIELDS_LIST  = ['SENS', 'PR_DEBUT', 'PR_FIN', 'INSEE', 'COMMUNE', 'SCA',
                             'DEX', 'DRE', 'DISTRICT', 'CENTRE_ENTRETIEN']
         PROJ         = 'AutorouteUniquement'
         FIELD_TARGET = ''
+    # Si pas de test et que le script est exuté en main => les variables principales seront récoltées depuis arcgispro
     else:
         DATA         = arcpy.GetParameter(0) # Donnée à géocoder dans le projet
         FIELDS       = arcpy.GetParameterAsText(1)  # Champs à géocoder
