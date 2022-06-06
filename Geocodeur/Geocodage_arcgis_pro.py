@@ -287,17 +287,15 @@ def arcgis_GeomtoPR(path,fields_add_input,projection,aut_field,proj_va,calc_poly
         for r in response_pr['Resultat']:
             add = API_GeomToPR().API_resultat(r)
             list_update.append(add)
-        if calc_polygon is True:
-            # Si la donnée est un polygon => Remplacement des fin et debut dans les résultats
-            if geom_type== 'Polygon':
-                for idx,u in enumerate(list_update):
-                    u['PR_DEBUT'] = pr_polygon[idx][0][0]
-                    u['CODE_DEBUT']=pr_polygon[idx][0][1]
-                    u['AUTOROUTE_DEBUT'] = pr_polygon[idx][0][2]
-                    u['PR_FIN'] = pr_polygon[idx][1][0]
-                    u['CODE_FIN'] = pr_polygon[idx][1][1]
-                    u['AUTOROUTE_FIN'] = pr_polygon[idx][1][2]
-
+        # Si la donnée est un polygon et qu'il faut calculer les debuts et fins => Remplacement des fin et debut dans les résultats
+        if calc_polygon is True and geom_type== 'Polygon':
+            for idx,u in enumerate(list_update):
+                u['PR_DEBUT'] = pr_polygon[idx][0][0]
+                u['CODE_DEBUT']=pr_polygon[idx][0][1]
+                u['AUTOROUTE_DEBUT'] = pr_polygon[idx][0][2]
+                u['PR_FIN'] = pr_polygon[idx][1][0]
+                u['CODE_FIN'] = pr_polygon[idx][1][1]
+                u['AUTOROUTE_FIN'] = pr_polygon[idx][1][2]
         '''
         try :
             for r in response_pr['Resultat']:
