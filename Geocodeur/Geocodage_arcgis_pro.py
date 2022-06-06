@@ -85,7 +85,7 @@ class API_GeomToPR:
     def start_request (self,coder,parameter):
         jsonData = json.dumps(parameter)
         js = '&f=json'
-        #url = 'https://arcgisserverdev.vinci-autoroutes.com/arcgis/rest/services/Referentiel/ReferentielGeocodeurV2/MapServer/exts/Geocodeur/Geom2APS?GeometrieEtOption=%s%s'
+        #url = 'https://...?GeometrieEtOption=%s%s'
         url = coder+'?GeometrieEtOption=%s%s'
         result = requests.get(url % (jsonData, js)).json()
         return result
