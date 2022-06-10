@@ -378,5 +378,5 @@ if __name__ == '__main__':
         PROJ_VA      = arcpy.GetParameter(3) # Si coché : projection uniquement sur route VA (booléen facultatif)
         FIELD_TARGET = arcpy.GetParameterAsText(4) # Champ cible pour la projection spécifique (facultatif)
         CODER        = arcpy.GetParameterAsText(5) # URL de l'API de géocodage
-# Lancement du script
-arcgis_GeomtoPR(DATA,FIELDS_LIST,PROJ,FIELD_TARGET,PROJ_VA,CODER)
+    # Lancement du script
+    arcgis_GeomtoPR(DATA,FIELDS_LIST,PROJ,FIELD_TARGET,PROJ_VA,CODER)
