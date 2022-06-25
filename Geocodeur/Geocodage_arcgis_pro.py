@@ -183,7 +183,7 @@ def arcgis_GeomtoPR(path,add,fields_add_input,projection,aut_field,proj_va,spec_
     TRACE("**********************************")
     # Création du nombre max de requêtes à envoyer en même temps (130)
     fields_add=fields_add_input
-    paquet=13
+    paquet=130
     vueUpdate= 'vueUpdate'
     arcpy.management.MakeFeatureLayer(path, vueUpdate)
     # Vérification si les champs du géocodage à récupérer existent déjà dans la donnée
