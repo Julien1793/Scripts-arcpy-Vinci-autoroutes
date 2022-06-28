@@ -386,10 +386,10 @@ def arcgis_GeomtoPR(path,add,fields_add_input,projection,aut_field,proj_va,spec_
         edit.startEditing(False, False)
         edit.startOperation()
         TRACE("!!!!EDIT with operation!!!!")
-    elif ".sde" not in workspace and int(str(long)) <= 80000:
+    elif ".sde" not in workspace and int(str(long)) <= 8000:
         TRACE ("!!!!EDIT without operation!!!!")
         edit.startEditing(False, False)
-    elif ".sde" not in workspace and int(str(long)) > 80000:
+    elif ".sde" not in workspace and int(str(long)) > 8000:
         TRACE ("!!!!NO EDIT!!!!")
     arcpy.SetProgressor("step", "Update de la table", 0,long_int, 1)
 
@@ -415,7 +415,7 @@ def arcgis_GeomtoPR(path,add,fields_add_input,projection,aut_field,proj_va,spec_
     if ".sde" in workspace:
         edit.stopOperation()
         edit.stopEditing(True)
-    elif ".sde" not in workspace and int(str(long)) <= 80000:
+    elif ".sde" not in workspace and int(str(long)) <= 8000:
         edit.stopEditing(True)
 
     # Récupération temps de traitement
