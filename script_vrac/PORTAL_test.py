@@ -18,7 +18,7 @@ for server in gis_servers:
         print(service)
 
 server1 = gis_servers[0] # Premier serveur
-flds = server1.services.folders # Dossier où sont stockés les services
+flds = server1.services.folders # Dossiers où sont stockés les services
 hosted_services = server1.services.list(folder='Foncier') # Dossier Foncier
 for i in hosted_services: # Loop dans le dossier Foncier pour lire les services
     serv_prop =i.properties # Récupération des propriétés de chaque service
